@@ -1,23 +1,18 @@
 def f (x,y,z):
-    if x == 1:
-        if y >= 2:
-            if z=="Ulf":
-                return y
-            elif z=="Bernd":
-                return x
-        elif y == 2:
-            return -99
-        elif y>0:
-            if y<2:
-                return y/2
-            else:
-                return y/4
+    if x != 1:
+        return x
+    else:
+        if y >= 2 and z == "Ulf":
+            return y
+        elif y >= 2 and z=="Bernd":
+            return x
+        elif y>0 and y<2:
+            return y/2
         else:
             return 0
-    else:
-        return x
+    
 
-print(f(1,2,"Ulf"))
+print(f(x=1,y=2,z="Ulf"))
 
 def g(x,y):
     for i in range(10):
